@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolean Project</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button
+      onclick="
+       let randomVariable = Math.ceil(Math.random() * 3);
+      if(randomVariable === 2){
+        alert(`You choose Rock and Computer Choose Paper : So you loose`)
+      }else if (randomVariable === 1){
+        alert(`You choose Rock and Computer Choose Rock : So tie`)
+      }else{
+        alert(`You choose Rock and Computer Choose Scissors : So you win`)
+      }
+    
+    "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+        randomVariable = Math.ceil(Math.random() * 3);
+      if(randomVariable === 2){
+        alert(`You choose Paper and Computer Choose Paper : So tie`)
+      }else if (randomVariable === 1){
+        alert(`You choose Paper and Computer Choose Rock : So you win`)
+      }else{
+        alert(`You choose Paper and Computer Choose Scissors : So you loose`)
+      }
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+        randomVariable = Math.ceil(Math.random() * 3);
+      if(randomVariable === 2){
+        alert(`You choose Scissors and Computer Choose Paper : So you win`)
+      }else if (randomVariable === 1){
+        alert(`You choose Scissors and Computer Choose Rock : So you loose`)
+      }else{
+        alert(`You choose Scissors and Computer Choose Scissors : So tie`)
+      }
+    "
+    >
+      Scissors
+    </button>
+    <script>
+      //In video theyhave used different approach see it
+      console.log("Welcome to game");
+    </script>
+  </body>
+</html>
+
+<!-- 
+if (cost < 40) {
+  cost = +cost + 10;
+  // because input value is string we need to convert string to number so we use +cost we converts it
+} -->
+
+<!-- if (getObject.innerText === "Subscribe") {
+  getObject.innerText = "Subscribed";
+  getObject.style.backgroundColor = "gray";
+  getObject.style.color = "black";
+} else {
+  getObject.innerText = "Subscribe";
+  getObject.style.backgroundColor = "black";
+  getObject.style.color = "white";
+} -->
+
+<!-- Why this doesnt work learn about it  -->
+<!-- function displayText() {
+  const pContainer = document.querySelector(".js-display-text");
+  console.log(pContainer);
+  todoList.forEach((item) => {
+    pContainer.innerHTML = `<p>${item}</p>`;
+  });
+} -->

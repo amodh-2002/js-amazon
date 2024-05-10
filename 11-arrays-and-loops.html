@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops and Array</title>
+  </head>
+  <body>
+    <script>
+      //   const myArray = [10, 11, 12];
+      //   console.log(myArray);
+      //   console.log(myArray[0]);
+      //   console.log(myArray[1]);
+      //   myArray[1] = 20;
+      //   console.log(myArray);
+      //   console.log(typeof [1, 2]);
+      //   console.log(Array.isArray(myArray));
+      //   console.log(myArray.length);
+      //   myArray.push(60);
+      //   console.log(myArray);
+      //   myArray.splice(0, 2);
+      //   console.log(myArray);
+
+      //   let i = 1;
+      //   while (i < 10) {
+      //     console.log(i);
+      //     i++;
+      //   }
+      //   for (let i = 1; i <= 5; i++) {
+      //     console.log(i);
+      //   }
+      //   const todoList = ["make dinner", "wash dishes", "watch yt"];
+      //   for (let i = 0; i < todoList.length; i++) {
+      //     console.log(todoList[i]);
+      //   }
+      //   todoList.forEach((first) => {
+      //     console.log(first);
+      //   });
+      //   for (let todolist of todoList) {
+      //     console.log(todolist);
+      //   }
+
+      // Accumulator pattern c
+      //   const nums = [1, 1, 3];
+      //   let total = 0;
+
+      //   nums.forEach((num) => {
+      //     total += num;
+      //   });
+      //   console.log(total);
+
+      //   const numsDoubled = [];
+      //   nums.forEach((doubleNums) => {
+      //     numsDoubled.push(doubleNums * 2);
+      //   });
+      //   console.log(numsDoubled);
+
+      //   const array1 = [1, 2, 3];
+      //   const array2 = [...array1];
+      //   const array3 = array1;
+
+      //   console.log(array2);
+      //   if (array1 === array3) {
+      //     console.log("same");
+      //   } else {
+      //     console.log("not same");
+      //   }
+
+      const array1 = [1, 2, 3];
+      const array2 = array1.slice();
+      array1.push(4);
+      console.log(array1);
+      console.log(array2);
+
+      const [first, second, third] = [1, 2, 4];
+      for (let i = 1; i < 10; i++) {
+        if (i % 3 === 0) {
+          continue;
+        }
+        console.log(i);
+        if (i === 8) {
+          break;
+        }
+      }
+      let i = 1;
+
+      while (i <= 10) {
+        if (i % 3 === 0) {
+          i++;
+          //as you can see we have update this manually otherwise it will go infinite loop
+          continue;
+        }
+        console.log(i);
+        i++;
+      }
+
+      function doubleArray(nums) {
+        const numsDoubled = [];
+
+        for (let i = 0; i < nums.length; i++) {
+          const num = nums[i];
+          if (num === 0) {
+            //return === break
+            return numsDoubled;
+          }
+          numsDoubled.push(num * 2);
+        }
+        return numsDoubled;
+      }
+      console.log(doubleArray([1, 1, 3]));
+      console.log(doubleArray([2, 2, 5, 0, 5]));
+    </script>
+  </body>
+</html>
